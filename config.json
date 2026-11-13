@@ -1,0 +1,8 @@
+{
+  "mode": "static",
+  "parentPin": "2468",
+  "storageKey": "typing-lab.state.v1",
+  "defaultLayout": "laptop",
+  "defaultTrack": "english",
+  "note": "本文件为默认配置清单；实际生效的是同目录 config.js，用记事本修改后刷新页面即可。"
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4f6bed">
+  <title>打字小课堂 · 初中英语键位进阶</title>
+  <!-- 默认自动按当前页面目录推导 API 前缀。若 API 走独立网关，可启用下一行并改为实际前缀（需带 api/）：
+  <meta name="typing-lab-api-base" content="/typing/api/"> -->
+  <link rel="stylesheet" href="./css/style.css?v=4.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='50' font-size='50'>⌨️</text></svg>">
+  <script src="./config.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <a class="brand" href="#/home">
+        <span class="brand-icon">⌨</span>
+        <span><b>打字小课堂</b><small>初中英语键位进阶 · 8 课 40 关</small></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#/home" data-nav="home">首页</a>
+        <a href="#/curriculum" data-nav="curriculum">课程</a>
+        <a href="#/fingers" data-nav="fingers">指法教室</a>
+        <a href="#/free" data-nav="free">自由练习</a>
+      </nav>
+      <div class="top-actions">
+        <label class="select-wrap" title="切换键盘布局">
+          <span>键盘</span>
+          <select id="layout-select" aria-label="键盘布局"></select>
+        </label>
+        <label class="select-wrap" title="切换学习者">
+          <span>学习者</span>
+          <select id="learner-select" aria-label="学习者"></select>
+        </label>
+        <button class="btn btn-mini" id="add-learner" title="新增学习者">＋</button>
+        <a class="btn btn-mini btn-outline" href="./parent.html" title="家长监督面板">家长面板</a>
+      </div>
+    </header>
+
+    <main id="view" class="view"></main>
+
+    <footer class="statusbar">
+      <span class="sync-dot" id="sync-dot"></span>
+      <span id="sync-text">初始化中…</span>
+      <span class="status-spacer"></span>
+      <span class="storage-note">记录保存在本机浏览器 · 家长面板可查看每次练习的时长与进度</span>
+      <button class="btn btn-link" id="sync-now">立即同步</button>
+    </footer>
+  </div>
+
+  <div class="modal-host" id="modal" hidden></div>
+  <script type="module" src="./js/app.js?v=4.0"></script>
+</body>
+</html>

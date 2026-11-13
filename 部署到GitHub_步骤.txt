@@ -1,0 +1,44 @@
+部署到 GitHub Pages · 操作步骤
+========================================
+
+【方式 A｜网页上传，无需安装 git】
+
+ 1. 登录 https://github.com ，右上角 “+” → New repository。
+ 2. 仓库名填 typing-lab（或任意名称），选择 Public；
+    不要勾选 README / .gitignore / license 等初始化文件，点 Create repository。
+ 3. 在仓库页点 “uploading an existing file”（或 Add file → Upload files）。
+ 4. 把本文件夹内的【全部文件】拖入上传区（不要拖本文件夹本身）。
+    注意 .nojekyll 是隐藏文件，请确认一并上传。
+    “工具/” 目录是辅助脚本，可不上传，不影响站点运行。
+ 5. 点 Commit changes。
+ 6. 仓库菜单 Settings → 左侧 Pages →
+    Source 选 “Deploy from a branch”，Branch 选 main / root → Save。
+ 7. 等待 1～2 分钟，访问：
+       练习端   https://<你的用户名>.github.io/<仓库名>/
+       家长面板 https://<你的用户名>.github.io/<仓库名>/parent.html
+
+【方式 B｜命令行推送】
+
+ 先确认已配置 git 身份（只需一次）：
+       git config --global user.name  "你的名字"
+       git config --global user.email "你的邮箱"
+
+ 在本文件夹内打开命令行，依次执行（把 <仓库地址> 换成第 2 步创建的 HTTPS 地址）：
+       git init -b main
+       git add -A
+       git commit -m "Typing Lab v4.0"
+       git remote add origin <仓库地址>
+       git push -u origin main
+
+ 也可以双击运行 工具/一键推送到GitHub.bat，并把仓库地址作为参数传入：
+       一键推送到GitHub.bat https://github.com/yourname/typing-lab.git
+
+ 推送完成后，仍按方式 A 第 6 步开启 Pages。
+
+【常见问题】
+
+ · 页面打开空白 / 控制台报 CORS：说明是用 file:// 打开的。
+   本仓库源码需通过 HTTP(S) 访问；请开启 Pages，或用本地静态服务器。
+   免联网双击打开请用「初中英语打字练习_离线版.zip」。
+ · 家长面板提示 PIN 不正确：默认 PIN 为 2468，可在 config.js 中修改 parentPin。
+ · 记录不见了：localStorage 按域名隔离，换域名/换浏览器需用家长面板导出再导入备份。

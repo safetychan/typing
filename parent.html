@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1f2937">
+  <title>家长监督 · 打字小课堂</title>
+  <!-- 默认自动按当前页面目录推导 API 前缀。若 API 走独立网关，可启用下一行并改为实际前缀（需带 api/）：
+  <meta name="typing-lab-api-base" content="/typing/api/"> -->
+  <link rel="stylesheet" href="./css/style.css?v=4.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='50' font-size='50'>📊</text></svg>">
+  <script src="./config.js"></script>
+</head>
+<body class="parent-page">
+  <div id="app">
+    <header class="topbar topbar-dark">
+      <a class="brand" href="./index.html">
+        <span class="brand-icon">📊</span>
+        <span><b>家长监督</b><small>每次练习 · 时长 / 进度 / 内容</small></span>
+      </a>
+      <nav class="nav">
+        <a href="./index.html" class="active">← 返回练习端</a>
+      </nav>
+      <div class="top-actions">
+        <span class="source-badge" id="source-badge">连接中…</span>
+      </div>
+    </header>
+    <main id="view" class="view"></main>
+    <footer class="statusbar">
+      <span>记录保存在本机浏览器，可导出 CSV / JSON 备份</span>
+      <span class="status-spacer"></span>
+      <span>家长 PIN 默认 2468 · 本机校验，不上传任何数据</span>
+    </footer>
+  </div>
+  <div class="modal-host" id="modal" hidden></div>
+  <script type="module" src="./js/parent.js?v=4.0"></script>
+</body>
+</html>
